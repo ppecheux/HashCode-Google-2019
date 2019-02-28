@@ -6,8 +6,16 @@ def get_data():
     lines = lines[1:]
     imgs = {}
     for i,v in enumerate(lines):
-        imgs[i] = 
-    print(lines)
+        imgs[i] = []
+        values = v.split(" ")
+        if not values == ['']:
+            for each in values:
+                imgs[i].append(each)
+            imgs[i][1] = int(imgs[i][1])
+    if imgs[i] == []:
+        del imgs[i]
+
+    return imgs
 
 get_data()
 
